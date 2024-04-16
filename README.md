@@ -8,3 +8,4 @@
 - **Funzionamento**: Interfaccia CLI che è in grado di interagire con una molteplicità di cartelle, i quali a loro volta contengono persone (rappresentate in file .JSON) con i loro dati.
 - **Prospettive future**: Applicazione semplice sviluppata sia per uso personale che per esercizio. Ergo, non avrà particolari prospettive.
 - **Project Status**: Appena iniziato. Un po' di pazienza, insomma...
+- **Strumenti Usati**: Numpy per calcolo matriciale. Modulo per gestire la quantità dei soldi scritto da capo.

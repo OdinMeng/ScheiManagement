@@ -1,5 +1,7 @@
 # Definisce la classe "Soldi" per evitare dei casini con i float... grr grr
-# Rappresentazione in JSON: [interi, centesimi]
+# Rappresentazione in JSON: [interi, centesimi] dev'essere possibile
+# Ogni soldo viene rappresentato come una coppia di numeri: interi e centesimi
+
 class Soldi:
     def __init__(self, interi, centesimi): #NOTA: interi, centesimi >= 0 e ∈ ℕ (NO FLOAT!)
         self.interi = interi
@@ -29,7 +31,7 @@ class Soldi:
         return Soldi(TOTinteri, TOTcentesimi)
     
     def RapprSTR(self):
-        return f"{self.interi}.{self.centesimi}"
+        return f"{self.interi}.{self.centesimi}" # Rappresentazione in stringa (discutibilmente utile)
 
     def RapprLIST(self):
-        return [self.interi, self.centesimi]
+        return [self.interi, self.centesimi] # Rappresentazione in lista (molto utile!)

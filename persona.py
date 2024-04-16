@@ -3,6 +3,8 @@ import os
 import json
 from soldi import Soldi 
 
+# Deprecata
+
 class Persona:
     def __init__(self, nome, debiti={}):
         self.nome = nome
