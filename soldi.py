@@ -12,7 +12,7 @@ class Soldi:
         else:
             self.centesimi = centesimi
 
-    def __add__(self, other):
+    def __add__(self, other): # N.B. Posso anche sottrarre
         TOTinteri = self.interi + other.interi
         TOTcentesimi = self.centesimi + other.centesimi
 
@@ -31,7 +31,38 @@ class Soldi:
         return Soldi(TOTinteri, TOTcentesimi)
     
     def RapprSTR(self):
-        return f"{self.interi}.{self.centesimi}" # Rappresentazione in stringa (discutibilmente utile)
+        return f"{self.interi}.{self.centesimi:02}" # Rappresentazione in stringa (discutibilmente utile)
 
     def RapprLIST(self):
         return [self.interi, self.centesimi] # Rappresentazione in lista (molto utile!)
+    
+    def cfr(self, other):
+        """
+        Return Value Key
+        -1: other is bigger than self
+        0: equal
+        1: self is bigger than other
+        """
+
+        if type(other) != Soldi:
+            raise Exception("Other type is not of Soldi type")
+        
+        if self.interi > other.interi:
+            return 1 
+        
+        elif other.interi > self.interi:
+            return -1
+        
+        else: # Equal
+            if self.centesimi > other.centesimi: 
+                return 1
+            
+            elif other.centesimi > self.centesimi:
+                return -1
+            
+            else:
+                return 0
+            
+    def minus(self):
+        NewSoldi = Soldi(-1*self.interi, -1*self.centesimi)
+        return NewSoldi
